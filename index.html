@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savanna Wildlife Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1><i class="fas fa-leaf"></i> Savanna Wildlife Reserve</h1>
+                <p class="header-subtitle">Real-time Park Management System</p>
+            </div>
+            <div class="header-right">
+                <div class="weather-widget">
+                    <i class="fas fa-sun"></i>
+                    <span>32°C Sunny</span>
+                </div>
+                <div class="time-widget">
+                    <span id="current-time">14:30 EAT</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard-main">
+            <!-- Sidebar Navigation -->
+            <aside class="dashboard-sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Overview</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-paw"></i>
+                        <span>Wildlife Tracking</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Patrol Routes</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Alerts</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Staff Management</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="dashboard-content">
+                <!-- Quick Stats -->
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-elephant"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>2,847</h3>
+                            <p>Total Wildlife Count</p>
+                            <span class="stat-change positive">+12% from last month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>156</h3>
+                            <p>Active Sightings Today</p>
+                            <span class="stat-change positive">+8% from yesterday</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>98.7%</h3>
+                            <p>Security Coverage</p>
+                            <span class="stat-change neutral">No change</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>94.2%</h3>
+                            <p>Health Index</p>
+                            <span class="stat-change positive">+2.1% this week</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Wildlife Activity Map -->
+                    <div class="dashboard-card large">
+                        <div class="card-header">
+                            <h3><i class="fas fa-map"></i> Wildlife Activity Map</h3>
+                            <div class="card-actions">
+                                <button class="btn-icon"><i class="fas fa-expand"></i></button>
+                                <button class="btn-icon"><i class="fas fa-refresh"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="map-container">
+                                <div class="map-placeholder">
+                                    <div class="map-overlay">
+                                        <div class="animal-marker elephant" style="top: 30%; left: 20%;">
+                                            <i class="fas fa-elephant"></i>
+                                            <span class="marker-label">Elephant Herd</span>
+                                        </div>
+                                        <div class="animal-marker lion" style="top: 45%; left: 60%;">
+                                            <i class="fas fa-paw"></i>
+                                            <span class="marker-label">Lion Pride</span>
+                                        </div>
+                                        <div class="animal-marker zebra" style="top: 70%; left: 35%;">
+                                            <i class="fas fa-horse"></i>
+                                            <span class="marker-label">Zebra Migration</span>
+                                        </div>
+                                        <div class="animal-marker giraffe" style="top: 25%; left: 75%;">
+                                            <i class="fas fa-giraffe"></i>
+                                            <span class="marker-label">Giraffe Tower</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Sightings -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas binoculars"></i> Recent Sightings</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="sighting-list">
+                                <div class="sighting-item">
+                                    <div class="sighting-time">14:25</div>
+                                    <div class="sighting-details">
+                                        <strong>Leopard</strong> spotted near Waterhole #3
+                                        <span class="sighting-location">Sector Alpha</span>
+                                    </div>
+                                </div>
+                                <div class="sighting-item">
+                                    <div class="sighting-time">13:42</div>
+                                    <div class="sighting-details">
+                                        <strong>Cheetah Family</strong> hunting gazelles
+                                        <span class="sighting-location">Sector Beta</span>
+                                    </div>
+                                </div>
+                                <div class="sighting-item">
+                                    <div class="sighting-time">12:15</div>
+                                    <div class="sighting-details">
+                                        <strong>Rhino Calf</strong> born this morning
+                                        <span class="sighting-location">Breeding Center</span>
+                                    </div>
+                                </div>
+                                <div class="sighting-item">
+                                    <div class="sighting-time">11:30</div>
+                                    <div class="sighting-details">
+                                        <strong>Wild Dogs</strong> pack movement detected
+                                        <span class="sighting-location">Sector Gamma</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weather Conditions -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-cloud-sun"></i> Weather Conditions</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="weather-info">
+                                <div class="weather-main">
+                                    <div class="weather-temp">32°C</div>
+                                    <div class="weather-desc">Sunny & Clear</div>
+                                </div>
+                                <div class="weather-details">
+                                    <div class="weather-item">
+                                        <span>Humidity</span>
+                                        <strong>45%</strong>
+                                    </div>
+                                    <div class="weather-item">
+                                        <span>Wind Speed</span>
+                                        <strong>12 km/h</strong>
+                                    </div>
+                                    <div class="weather-item">
+                                        <span>Visibility</span>
+                                        <strong>15 km</strong>
+                                    </div>
+                                    <div class="weather-item">
+                                        <span>UV Index</span>
+                                        <strong>8 (High)</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Alerts -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-shield"></i> Security Status</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="security-status">
+                                <div class="status-item normal">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>All patrols on schedule</span>
+                                </div>
+                                <div class="status-item warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Unauthorized vehicle detected</span>
+                                </div>
+                                <div class="status-item normal">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Fence integrity: 100%</span>
+                                </div>
+                                <div class="status-item info">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Ranger team repositioning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Population Trends -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-bar"></i> Population Trends</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="population-chart">
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 80%; background: #8B4513;">
+                                        <span class="bar-label">Elephants</span>
+                                        <span class="bar-value">284</span>
+                                    </div>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 60%; background: #DAA520;">
+                                        <span class="bar-label">Lions</span>
+                                        <span class="bar-value">42</span>
+                                    </div>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 90%; background: #CD853F;">
+                                        <span class="bar-label">Zebras</span>
+                                        <span class="bar-value">1,247</span>
+                                    </div>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 70%; background: #A0522D;">
+                                        <span class="bar-label">Giraffes</span>
+                                        <span class="bar-value">89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conservation Efforts -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-seedling"></i> Conservation Efforts</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="conservation-stats">
+                                <div class="conservation-item">
+                                    <div class="conservation-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="conservation-details">
+                                        <strong>Anti-Poaching</strong>
+                                        <span>24/7 patrols active</span>
+                                    </div>
+                                </div>
+                                <div class="conservation-item">
+                                    <div class="conservation-icon">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                    <div class="conservation-details">
+                                        <strong>Habitat Restoration</strong>
+                                        <span>1,200 acres restored</span>
+                                    </div>
+                                </div>
+                                <div class="conservation-item">
+                                    <div class="conservation-icon">
+                                        <i class="fas fa-microscope"></i>
+                                    </div>
+                                    <div class="conservation-details">
+                                        <strong>Research Projects</strong>
+                                        <span>15 active studies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour12: false, 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            }) + ' EAT';
+            document.getElementById('current-time').textContent = timeString;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // Add interactive functionality
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Simulate real-time updates
+        setInterval(() => {
+            // Randomly update wildlife count
+            const wildlifeCount = document.querySelector('.stat-card h3');
+            const currentCount = parseInt(wildlifeCount.textContent.replace(',', ''));
+            const newCount = currentCount + Math.floor(Math.random() * 3) - 1;
+            wildlifeCount.textContent = newCount.toLocaleString();
+        }, 30000);
+    </script>
+</body>
+</html>
